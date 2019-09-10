@@ -1,0 +1,108 @@
+<!-- !DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Square</title>
+    <link rel="stylesheet" href="photon/css/photon.css">
+  </head>
+  <body>
+    <h1>Script Running in Python</h1>
+    We are using Python
+    <br>
+
+    <input type="number" id="number"/>
+    <button id="btn">calcular cuadrado</button>
+    
+    <div id="result"></div>
+
+
+    <script src="./renderer.js"></script>
+    <script src="./links/square.js"></script>
+
+  </body>
+</html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Running a Python script</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="photon/css/photon.min.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="window">
+
+      <!-- header class="toolbar toolbar-header">
+        <div class="toolbar-actions">
+          <div class="btn-group">
+            <button class="btn btn-default">
+              <span class="icon icon-home"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-folder"></span>
+            </button>
+            <button class="btn btn-default active">
+              <span class="icon icon-cloud"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-popup"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-shuffle"></span>
+            </button>
+          </div>
+        </div>
+      </header -->
+        <div class="window-content" style="background-color: #f5f5f4;">
+
+          <div class="pane-group">
+            <div class="pane-sm sidebar">
+              <nav class="nav-group">
+                <h5 class="nav-group-title">Archivo</h5>
+                <a class="nav-group-item">
+                  Guardar
+                </a>
+                <a class="nav-group-item">
+                  Abrir
+                </a>
+                <h5 class="nav-group-title">Opciones</h5>
+                <a class="nav-group-item delete">
+                  <span class="icon icon-arrows-ccw"></span>
+                  Reiniciar
+                </a>
+              </nav>
+            
+            </div>
+            <div class="pane">
+            
+              <div class="padded-more">
+
+              <h2>Calcula el cuadrado de un número</h2>
+              <div class="form-group">
+                <label>Número a calcular</label>
+                <input id="number" type="number" class="form-control" placeholder="Número">
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-form btn-default" class="delete">Borrar</button>
+                <button type="submit" class="btn btn-form btn-primary" id="btn">Calcular cuadrado</button>
+              </div>
+
+              
+              <h2 id="result"></h2>
+
+
+              <script src="./renderer.js"></script>
+              <script src="./links/square.js"></script>
+            </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
