@@ -6,7 +6,7 @@ get_square = () => {
 
     var options = {
         scriptPath: path.join(__dirname, 'python/'),
-        args: [number]
+        args: [number, 0.00001]
     }
 
     PythonShell.run('script.py', options, (err, results) => {
