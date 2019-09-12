@@ -27,7 +27,13 @@ document.querySelector('#btn').addEventListener('click', e => {
 })
 
 document.querySelector('.delete').addEventListener('click', e => {
-    var number = document.querySelector('#number')
-    number.value = ''
-    result = document.querySelector('#result').innerHTML = ''
+
+	document.querySelector('#kab').value = ''
+	document.querySelector('#kel').value = ''
+	document.querySelector('#cdrag').value = ''
+	document.querySelector('#kaberr').value = ''
+	document.querySelector('#kelerr').value = ''
+	document.querySelector('#cdragerr').value = ''
+	document.querySelector('#eerr').value = ''
+	document.querySelector('#result').innerHTML = ''
 })
