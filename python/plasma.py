@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 
 def main():
 
-
     kab = float(sys.argv[1])
     kel = float(sys.argv[2])
     cdrag = float(sys.argv[3])
@@ -12,7 +11,6 @@ def main():
     kelerr = float(sys.argv[5])
     cdragerr = float(sys.argv[6])
     eerr = float(sys.argv[7])
-
 
     # cudstom_e = custom_exponential(kab, eerr)
     p_concentration = plasma_concentration(kab, kel, cdrag, kaberr, kelerr, cdragerr, eerr)
@@ -23,6 +21,7 @@ def main():
     print(p_concentration)
 
 def plasma_concentration(kab, kel, cdrag, kaberr, kelerr, cdragerr, eerr):
+
     return 1.224
 
 def custom_exponential(num, error):
