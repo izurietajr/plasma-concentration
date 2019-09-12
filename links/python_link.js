@@ -34,6 +34,6 @@ document.querySelector('.delete').addEventListener('click', e => {
 	document.querySelector('#kaberr').value = ''
 	document.querySelector('#kelerr').value = ''
 	document.querySelector('#cdragerr').value = ''
-	document.querySelector('#eerr').value = ''
+	document.querySelector('#eerr').value = '0.00001'
 	document.querySelector('#result').innerHTML = ''
 })
