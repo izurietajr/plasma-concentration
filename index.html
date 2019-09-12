@@ -52,74 +52,52 @@
             
             </div>
             <div class="pane">
-            
               <div class="padded-more">
-
-                <h2>Calcula el cuadrado de un número</h2>
+                <h2>Concentración de plasma</h2>
+              </div>
+              <div class="padded-more" style="width: 50%; float: left;">
                 <div class="form-group">
                   <label>Ritmo de Absorción</label>
                   <input id="kab" type="number" class="form-control" placeholder="Absorción">
                 </div>
-
                 <div class="form-group">
                   <label>Ritmo de Eliminación</label>
                   <input id="kel" type="number" class="form-control" placeholder="Eliminación">
                 </div>
-
                 <div class="form-group">
                   <label>Constante de dragado específico</label>
                   <input id="cdrag" type="number" class="form-control" placeholder="Constante">
                 </div>
-
+                <div class="form-group">
+                  <label>Error de la función exponencial</label>
+                  <input id="eerr" type="number" class="form-control" value="0.00001" placeholder="Exponencial">
+                </div>
                 <div class="form-actions">
                   <button type="submit" class="btn btn-form btn-default" class="delete">Borrar</button>
-                  <button type="submit" class="btn btn-form btn-primary" id="btn">Calcular cuadrado</button>
+                  <button type="submit" class="btn btn-form btn-primary" id="btn">Calcular</button>
                 </div>
-
-                
+              </div>
+              <div class="padded-more" style="width: 50%; float: left;">
+                <div class="form-group">
+                  <label>Error ritmo de Absorción</label>
+                  <input id="kaberr" type="number" class="form-control" placeholder="Absorción">
+                </div>
+                <div class="form-group">
+                  <label>Error ritmo de Eliminación</label>
+                  <input id="kelerr" type="number" class="form-control" placeholder="Eliminación">
+                </div>
+                <div class="form-group">
+                  <label>Error constante de dragado</label>
+                  <input id="cdragerr" type="number" class="form-control" placeholder="Constante">
+                </div>
+              </div>
+              <div class="padded-more" style="float: left; width: 100%">
                 <h2 id="result"></h2>
-
-
-                <script src="./renderer.js"></script>
-                <script src="./links/python_link.js"></script>
               </div>
             </div>
-            <div class="pane">
-            
-              <div class="padded-more">
-
-                <h2>Calcula el cuadrado de un número</h2>
-                <div class="form-group">
-                  <label>Ritmo de Absorción</label>
-                  <input id="kab" type="number" class="form-control" placeholder="Absorción">
-                </div>
-
-                <div class="form-group">
-                  <label>Ritmo de Eliminación</label>
-                  <input id="kel" type="number" class="form-control" placeholder="Eliminación">
-                </div>
-
-                <div class="form-group">
-                  <label>Constante de dragado específico</label>
-                  <input id="cdrag" type="number" class="form-control" placeholder="Constante">
-                </div>
-
-                <div class="form-actions">
-                  <button type="submit" class="btn btn-form btn-default" class="delete">Borrar</button>
-                  <button type="submit" class="btn btn-form btn-primary" id="btn">Calcular cuadrado</button>
-                </div>
-
-                
-                <h2 id="result"></h2>
-
-
-                <script src="./renderer.js"></script>
-                <script src="./links/python_link.js"></script>
-              </div>
-            </div>
+            <script src="./renderer.js"></script>
+            <script src="./links/python_link.js"></script>
           </div>
-
-          
         </div>
       </div>
     </div>

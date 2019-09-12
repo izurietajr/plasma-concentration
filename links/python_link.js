@@ -1,15 +1,21 @@
-get_square = () => {
+calculate = () => {
     var {PythonShell} = require('python-shell')
     var path = require('path')
 
-    var number = document.querySelector('#number').value
+    var kab = document.querySelector('#kab').value
+    var kel = document.querySelector('#kel').value
+    var cdrag = document.querySelector('#cdrag').value
+    var kaberr = document.querySelector('#kaberr').value
+    var kelerr = document.querySelector('#kelerr').value
+    var cdragerr = document.querySelector('#cdragerr').value
+    var eerr = document.querySelector('#eerr').value
 
     var options = {
         scriptPath: path.join(__dirname, 'python/'),
-        args: [number, 0.00001]
+        args: [kab, kel, cdrag, kaberr, kelerr, cdragerr, eerr]
     }
 
-    PythonShell.run('script.py', options, (err, results) => {
+    PythonShell.run('plasma.py', options, (err, results) => {
         if (err) throw err
         console.log(results, 'results')
         result = document.querySelector('#result').innerHTML = results[0]
@@ -17,7 +23,7 @@ get_square = () => {
 }
 
 document.querySelector('#btn').addEventListener('click', e => {
-    get_square()
+    calculate()
 })
 
 document.querySelector('.delete').addEventListener('click', e => {
