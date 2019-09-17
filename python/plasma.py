@@ -1,4 +1,5 @@
 import sys
+from sympy import symbols, diff
 from math import factorial, exp
 import matplotlib.pyplot as plt
 
@@ -21,7 +22,8 @@ def main():
     print(p_concentration)
 
 def plasma_concentration(kab, kel, cdrag, kaberr, kelerr, cdragerr, eerr):
-
+    t = symbols('t')
+    diff(t)
     return 1.224
 
 def custom_exponential(num, error):
