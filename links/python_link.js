@@ -18,13 +18,13 @@ calculate = () => {
     PythonShell.run('plasma.py', options, (err, results) => {
         if (err) throw err
         console.log(results, 'results')
-        result = document.querySelector('#result').innerHTML = results[0]
+        // result = document.querySelector('#result').innerHTML = results[0]
     })
 
     PythonShell.run('graphs.py', options, (err, results) => {
         if (err) throw err
         console.log(results, 'results')
-        result = document.querySelector('#result').innerHTML = results[0]
+        // result = document.querySelector('#result').innerHTML = results[0]
     })
 }
 

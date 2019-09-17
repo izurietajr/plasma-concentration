@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import sys
+from numpy import arange
 from sympy import symbols, diff
 from plasma import custom_exponential
 from math import exp
@@ -14,17 +15,17 @@ def main():
     cdragerr = float(sys.argv[6])
     eerr = float(sys.argv[7])
 
-    p_concentration = graph(kab, kel, cdrag, kaberr, kelerr, cdragerr, eerr)
-    print(p_concentration)
+    graph(kab, kel, cdrag, kaberr, kelerr, cdragerr, eerr)
+    # print(p_concentration)
 
 def graph(kab, kel, cdrag, kaberr, kelerr, cdragerr, eerr):
-    x = range(1, 10)
-    plt.plot(x, [plasma_concentration(kab, kel, cdrag, t) for t in x])
-    plt.plot(x, [plasma_concentration(kab+kaberr, kel+kelerr, cdrag+cdragerr, t) for t in x], 'r')
-    plt.plot(x, [plasma_concentration(kab-kaberr, kel-kelerr, cdrag-cdragerr, t) for t in x], 'g')
+    x = arange(1, 10, 0.1)
+    plt.plot(x, [plasma_concentration(kab, kel, cdrag, t, eerr) for t in x])
+    plt.plot(x, [plasma_concentration(kab+kaberr, kel+kelerr, cdrag+cdragerr, t, eerr) for t in x], 'r')
+    plt.plot(x, [plasma_concentration(kab-kaberr, kel-kelerr, cdrag-cdragerr, t, eerr) for t in x], 'g')
     plt.show()
 
-def plasma_concentration(kab, kel, cdrag, t):
+def plasma_concentration(kab, kel, cdrag, t, eerr):
     assert kab-kel != 0, 'División por cero'
     return cdrag*(kab/(kab-kel))*(exp(-kel*t)-exp(-kab*t))
 
